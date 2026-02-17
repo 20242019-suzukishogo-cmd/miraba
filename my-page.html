@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>MIRABA | MY PAGE</title>
+
+  <!-- base -->
+  <link rel="stylesheet" href="css/base/reset.css" />
+  <link rel="stylesheet" href="css/base/variables.css" />
+  <link rel="stylesheet" href="css/base/base.css" />
+
+  <!-- layout -->
+  <link rel="stylesheet" href="css/layout/screen.css" />
+  <link rel="stylesheet" href="css/layout/sidebar.css" />
+
+  <!-- page -->
+  <link rel="stylesheet" href="css/pages/my-page.css" />
+</head>
+
+<body>
+
+<!-- MENU -->
+<button id="menu-toggle">
+  <span class="menu-icon"><span></span><span></span><span></span></span>
+  <span class="menu-text">MENU</span>
+</button>
+
+<!-- SIDEBAR -->
+<div class="sidebar-overlay"></div>
+<nav class="sidebar">
+  <div class="sidebar-inner">
+    <div class="sidebar-body">
+      <ul class="sidebar-menu">
+        <li data-page="index.html">TOP</li>
+        <li data-page="profile.html">プロフィール</li>
+        <li data-page="up.html">投稿</li>
+        <li data-page="my-page.html" class="active">マイページ</li>
+        <li data-page="map.html">MAP</li>
+        <li data-page="friend.html">フレンド</li>
+        <li data-page="notice.html">お知らせ</li>
+        <li data-page="setting-p.html">設定とプライバシー</li>
+        <li data-page="help.html">ヘルプ</li>
+      </ul>
+      <div class="sidebar-footer">MIRABA</div>
+    </div>
+    <div class="sidebar-header">
+      <img src="images/miraba-logo.png" alt="MIRABA">
+    </div>
+  </div>
+</nav>
+
+<!-- ===== PAGE HEADER ===== -->
+<header class="page-header">
+
+  <div class="page-divider-horizontal"></div>
+
+  <div class="page-header-frame">
+    <h1 class="page-header-title">
+      MIRABA&nbsp;MY&nbsp;PAGE
+    </h1>
+  </div>
+
+</header>
+
+<!-- ★ ヘッダーの外・本文の前 -->
+<!-- ユーザー表示 -->
+<div class="my-user">
+  <div class="my-user-icon"></div>
+  <span class="my-user-name"></span>
+</div>
+
+
+<!-- ===== MAIN ===== -->
+<main class="my-page-screen">
+
+  <!-- TAB -->
+  <section class="glass-frame tab-frame">
+    <div class="tab-switcher">
+      <button class="tab-button active">投稿の記録</button>
+      <button class="tab-button">いいねした記録</button>
+    </div>
+  </section>
+
+  <!-- ★ T字ラッパー -->
+  <div class="t-divider-wrap">
+
+    <!-- 横ライン -->
+    <div class="tab-divider-horizontal wide"></div>
+
+    <!-- コンテンツ + 縦ライン -->
+    <section class="content-area">
+      <div class="content-columns">
+
+        <!-- LEFT : コメント投稿 -->
+        <div class="column comment-column">
+          <div class="comment-scroll">
+
+            <!-- 投稿待ち状態（コメント） -->
+            <div class="empty-state">
+              <p class="empty-title">まだ投稿がありません</p>
+              <p class="empty-text">
+                日常の中で気づいたことや、<br>
+                街の変化をここに残していきましょう。
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 縦ライン -->
+        <div class="column-divider"></div>
+
+        <!-- RIGHT : 画像投稿 -->
+        <div class="column image-column">
+          <div class="image-grid">
+
+            <!-- 投稿待ち状態（画像） -->
+            <div class="empty-image-state">
+              <p>画像が投稿されると、ここに表示されます</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</main>
+
+
+
+<!-- ===== IMAGE OVERLAY（body直下） ===== -->
+<div class="image-overlay" hidden>
+      <button class="overlay-close">×</button>
+  <div class="overlay-inner">
+
+    <!-- IMAGE VIEW -->
+    <div class="overlay-image-area">
+      <button class="slide-nav prev">‹</button>
+      <button class="slide-nav next">›</button>
+
+      <div class="overlay-image-viewport">
+        <div class="overlay-image-track"></div>
+      </div>
+
+      <div class="slide-indicator">
+        <span class="current">1</span> / <span class="total">1</span>
+      </div>
+    </div>
+
+    <!-- COMMENT SIDEBAR -->
+    <aside class="overlay-comment-area">
+
+      <div class="post-owner-comment">
+        <div class="comment-user">
+          <div class="user-icon"></div>
+          <span class="user-name">投稿者</span>
+        </div>
+        <p class="comment-text">
+          このとき感じたことを、忘れないように残している。
+        </p>
+      </div>
+
+      <div class="comment-log">
+        <div class="comment-item">
+          <div class="user-icon"></div>
+          <p>とても大切な視点だと思いました。</p>
+        </div>
+      </div>
+
+      <div class="comment-input">
+        <textarea placeholder="感じたことを残す"></textarea>
+        <button>送信</button>
+      </div>
+
+    </aside>
+
+  </div>
+</div>
+
+<script src="js/sidebar.js"></script>
+<script src="js/auth-guard.js"></script>
+<script src="js/my-page.js"></script>
+<script src="js/user-util.js"></script>
+
+</body>
+</html>

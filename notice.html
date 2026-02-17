@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>MIRABA | お知らせ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 共通（既存） -->
+  <link rel="stylesheet" href="css/sidebar.css" />
+  <script src="js/sidebar.js" defer></script>
+  <script src="js/auth-guard.js" defer></script>
+
+  <!-- Base -->
+  <link rel="stylesheet" href="css/base/reset.css">
+  <link rel="stylesheet" href="css/base/variables.css">
+  <link rel="stylesheet" href="css/base/base.css">
+
+  <!-- Layout -->
+  <link rel="stylesheet" href="css/layout/screen.css">
+  <link rel="stylesheet" href="css/layout/sidebar.css">
+
+  <!-- ページ専用 -->
+  <link rel="stylesheet" href="css/pages/notice.css" />
+</head>
+
+<body>
+  <!-- ===== MENU BUTTON ===== -->
+<button id="menu-toggle">
+  <span class="menu-icon">
+    <span></span><span></span><span></span>
+  </span>
+  <span class="menu-text">MENU</span>
+</button>
+
+<!-- ===== SIDEBAR ===== -->
+<div class="sidebar-overlay"></div>
+
+<nav class="sidebar">
+  <div class="sidebar-inner">
+
+    <div class="sidebar-body">
+      <ul class="sidebar-menu">
+        <li data-page="index.html">TOP</li>
+        <li data-page="profile.html">プロフィール</li>
+        <li data-page="up.html">投稿</li>
+        <li data-page="my-page.html">マイページ</li>
+        <li data-page="map.html">MAP</li>
+        <li data-page="friend.html">フレンド</li>
+        <li data-page="notice.html">お知らせ</li>
+        <li data-page="setting-p.html">設定とプライバシー</li>
+        <li data-page="help.html">ヘルプ</li>
+      </ul>
+
+      <div class="sidebar-footer">MIRABA</div>
+    </div>
+
+    <div class="sidebar-header">
+      <img src="images/miraba-logo.png" alt="MIRABA">
+    </div>
+
+  </div>
+</nav>
+
+  <!-- main（編集対象） -->
+  <main class="notice">
+    <header class="page-header">
+      <h1 class="page-title">お知らせ</h1>
+      <p class="page-sub">
+        MIRABAからの重要なご案内・更新情報をお届けします
+      </p>
+    </header>
+
+    <section class="notice-list">
+
+      <!-- 重要なお知らせ -->
+      <article class="notice-card is-important">
+        <div class="notice-meta">
+          <span class="notice-badge">重要</span>
+          <time class="notice-date">2026.01.25</time>
+        </div>
+
+        <div class="notice-body">
+          <h2 class="notice-title">
+            利用規約の一部改定について
+          </h2>
+          <p class="notice-summary">
+            サービスの安全性向上を目的として、利用規約の一部を改定いたしました。
+            詳細は後日公開予定の説明ページをご確認ください。
+          </p>
+        </div>
+      </article>
+
+      <!-- 通常のお知らせ -->
+      <article class="notice-card">
+        <div class="notice-meta">
+          <span class="notice-badge is-normal">お知らせ</span>
+          <time class="notice-date">2026.01.18</time>
+        </div>
+
+        <div class="notice-body">
+          <h2 class="notice-title">
+            お知らせ機能を公開しました
+          </h2>
+          <p class="notice-summary">
+            MIRABA内で重要な情報を確認できる「お知らせ」画面を追加しました。
+            今後のアップデート情報はこちらでご案内します。
+          </p>
+        </div>
+      </article>
+
+      <!-- 通常 -->
+      <article class="notice-card">
+        <div class="notice-meta">
+          <span class="notice-badge is-normal">更新</span>
+          <time class="notice-date">2026.01.10</time>
+        </div>
+
+        <div class="notice-body">
+          <h2 class="notice-title">
+            一部UIの視認性を改善しました
+          </h2>
+          <p class="notice-summary">
+            サイドバーおよび各画面のコントラスト調整を行い、
+            より落ち着いた視認性を実現しました。
+          </p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+</body>
+</html>

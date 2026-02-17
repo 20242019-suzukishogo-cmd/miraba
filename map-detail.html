@@ -1,0 +1,127 @@
+<!-- map-detail.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>MIRABA | MAP DETAIL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- BASE -->
+  <link rel="stylesheet" href="css/base/reset.css">
+  <link rel="stylesheet" href="css/base/base.css">
+
+  <!-- LAYOUT -->
+  <link rel="stylesheet" href="css/layout/screen.css">
+  <link rel="stylesheet" href="css/layout/sidebar.css">
+
+  <!-- PAGE -->
+  <link rel="stylesheet" href="css/pages/map-detail.css">
+
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+</head>
+
+<body class="black">
+
+<header class="map-detail-header">
+  <button class="back-btn" data-page="map.html">
+    ← 戻る
+  </button>
+
+  <h1 class="map-detail-title">
+    REQUEST 詳細
+  </h1>
+</header>
+
+<main class="screen map-detail-screen">
+
+  <section class="map-detail-container">
+
+    <!-- =========================
+         LEFT : DETAIL CARD
+    ========================== -->
+    <section class="detail-left">
+
+      <div class="request-detail-card" data-request-id="">
+
+        <!-- ===== HEADER ===== -->
+        <div class="detail-header-row">
+          <div class="detail-user">
+            <div class="detail-user-icon"></div>
+            <span class="detail-user-name"></span>
+          </div>
+
+          <button class="detail-edit-btn is-hidden">
+            編集
+          </button>
+        </div>
+
+        <!-- ===== CONTENT ===== -->
+        <div class="detail-body">
+
+          <div class="detail-row">
+            <span class="detail-label">日時</span>
+            <span class="detail-value" data-field="date"></span>
+          </div>
+
+          <div class="detail-row">
+            <span class="detail-label">場所</span>
+            <span class="detail-value" data-field="location"></span>
+          </div>
+
+          <div class="detail-row">
+            <span class="detail-label">内容</span>
+            <span class="detail-value" data-field="type"></span>
+          </div>
+
+          <div class="detail-section">
+            <span class="detail-label">概要</span>
+            <p class="detail-text" data-field="summary"></p>
+          </div>
+
+          <div class="detail-section">
+            <span class="detail-label">連絡事項</span>
+            <p class="detail-text" data-field="note"></p>
+          </div>
+
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="detail-footer">
+          <button class="request-save-btn">
+            保存
+          </button>
+
+          <button class="detail-update-btn is-hidden">
+            更新する
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         RIGHT : MAP
+    ========================== -->
+    <section class="detail-right">
+      <div class="map-area">
+        <div id="real-map"></div>
+      </div>
+    </section>
+
+  </section>
+
+</main>
+
+<script src="js/sidebar.js"></script>
+<script src="js/auth-guard.js"></script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/map-detail.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIRABA | MESSAGE</title>
+
+  <!-- BASE -->
+  <link rel="stylesheet" href="css/base/reset.css">
+  <link rel="stylesheet" href="css/base/variables.css">
+  <link rel="stylesheet" href="css/base/base.css">
+  <link rel="stylesheet" href="css/layout/screen.css">
+
+  <!-- PAGE -->
+  <link rel="stylesheet" href="css/pages/f-message.css">
+</head>
+<body>
+
+<main class="f-message-screen">
+
+  <header class="f-message-header">
+    <!-- BACK -->
+    <button class="back-btn" data-page="friend.html" aria-label="フレンドへ戻る">
+      <span class="arrow"></span>
+    </button>
+
+    <!-- USER -->
+    <div class="f-message-user">
+      <div class="f-message-icon"></div>
+      <div class="f-message-user-text">
+        <p class="name">灯（あかり）</p>
+        <p class="status">静かな共有</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="f-message-area">
+    <div class="date-divider">6月20日</div>
+
+    <div class="f-message-row received">
+      <div class="bubble">
+        最近、街の清掃に参加しました。<br>
+        無理のない形で続けています。
+        <span class="time">18:40</span>
+      </div>
+    </div>
+
+    <div class="f-message-row sent">
+      <div class="bubble">
+        共有ありがとうございます。<br>
+        気配が伝わってきました。
+        <span class="time">19:10</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="f-message-input">
+    <button class="tool-btn">＋</button>
+    <button class="tool-btn">☺︎</button>
+    <textarea placeholder="伝えたいことを、静かに書いてください"></textarea>
+    <button class="send-btn">送信</button>
+  </section>
+
+</main>
+
+<!-- JS -->
+<script src="js/page-router.js"></script>
+</body>
+</html>

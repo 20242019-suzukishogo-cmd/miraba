@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>MIRABA | HELP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Base -->
+  <link rel="stylesheet" href="css/base/reset.css">
+  <link rel="stylesheet" href="css/base/variables.css">
+  <link rel="stylesheet" href="css/base/base.css">
+
+  <!-- Layout -->
+  <link rel="stylesheet" href="css/layout/screen.css">
+  <link rel="stylesheet" href="css/layout/sidebar.css">
+
+  <!-- Page -->
+  <link rel="stylesheet" href="css/pages/help.css">
+</head>
+
+<body class="black">
+
+<!-- ===== MENU BUTTON ===== -->
+<button id="menu-toggle">
+  <span class="menu-icon">
+    <span></span><span></span><span></span>
+  </span>
+  <span class="menu-text">MENU</span>
+</button>
+
+<!-- ===== SIDEBAR ===== -->
+<div class="sidebar-overlay"></div>
+
+<nav class="sidebar">
+  <div class="sidebar-inner">
+
+    <div class="sidebar-body">
+      <ul class="sidebar-menu">
+        <li data-page="index.html">TOP</li>
+        <li data-page="profile.html">プロフィール</li>
+        <li data-page="up.html">投稿</li>
+        <li data-page="my-page.html">マイページ</li>
+        <li data-page="map.html">MAP</li>
+        <li data-page="friend.html">フレンド</li>
+        <li data-page="notice.html">お知らせ</li>
+        <li data-page="setting-p.html">設定とプライバシー</li>
+        <li data-page="help.html" class="active">ヘルプ</li>
+      </ul>
+
+      <div class="sidebar-footer">MIRABA</div>
+    </div>
+
+    <div class="sidebar-header">
+      <img src="images/miraba-logo.png" alt="MIRABA">
+    </div>
+
+  </div>
+</nav>
+
+<!-- ===== MAIN ===== -->
+<main class="screen help-screen">
+
+  <section class="help-glass">
+
+    <header class="help-header">
+      <h1>HELP</h1>
+      <p>
+        困ったとき、迷ったときのガイド
+      </p>
+    </header>
+
+    <!-- ===== 基本Q&A ===== -->
+    <div class="help-list">
+
+      <div class="help-item">
+        <h2>このアプリは何ですか？</h2>
+        <p>
+          MIRABAは、あなたの小さな行動を可視化し、  
+          未来の環境と街を守るための場所です。
+        </p>
+      </div>
+
+      <div class="help-item">
+        <h2>投稿は誰でもできますか？</h2>
+        <p>
+          Googleアカウントでログインしていれば、  
+          誰でも投稿できます。
+        </p>
+      </div>
+
+      <div class="help-item">
+        <h2>個人情報は公開されますか？</h2>
+        <p>
+          公開される情報は最低限に設計されています。  
+          詳しくは「設定とプライバシー」で考え方を説明しています。
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ★追加：信頼・安心セクション -->
+    <div class="help-divider"></div>
+
+    <section class="help-trust">
+      <h2 class="trust-title">信頼・安心に関するご案内</h2>
+
+      <p class="trust-intro">
+        MIRABAでは、安心して使っていただくために、  
+        いくつかの考え方や方針を公開しています。
+      </p>
+
+      <ul class="trust-list">
+        <li>
+          <strong>設定とプライバシー</strong><br>
+          どのような情報を扱い、何を扱わないかを説明しています。
+        </li>
+        <li>
+          <strong>利用についての考え方</strong><br>
+          MIRABAが大切にしている姿勢や、利用の前提をまとめています。
+        </li>
+        <li>
+          <strong>通報・投稿の考え方</strong><br>
+          不安を共有するための使い方を、やさしく案内しています。
+        </li>
+      </ul>
+
+      <p class="trust-note">
+        不安を感じたときは、  
+        これらのページにいつでも戻って確認できます。
+      </p>
+    </section>
+
+  </section>
+
+</main>
+
+<!-- ===== JS ===== -->
+<script src="js/sidebar.js"></script>
+<script src="js/auth-guard.js"></script>
+
+</body>
+</html>
