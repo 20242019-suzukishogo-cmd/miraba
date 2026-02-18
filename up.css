@@ -1,0 +1,311 @@
+/* ===============================
+   Screen
+=============================== */
+
+.up-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 8vw 14vh;
+  gap: 48px;
+}
+
+/* ===============================
+   Header
+=============================== */
+
+.up-header {
+  text-align: center;
+  max-width: 640px;
+}
+
+.up-header h1 {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.up-header p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ===============================
+   Card
+=============================== */
+
+.up-card {
+  width: 100%;
+  max-width: 680px;
+  padding: 40px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ===============================
+   User (quiet)
+=============================== */
+
+.up-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.85;
+}
+
+.up-user-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0.12)
+  );
+}
+
+.up-user-name {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ===============================
+   Textarea
+=============================== */
+
+.up-textarea {
+  width: 100%;
+  resize: none;
+  background: rgba(255,255,255,0.04);
+  border: none;
+  border-radius: 14px;
+  padding: 18px 20px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #fff;
+}
+
+.up-textarea::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+
+.up-textarea:focus {
+  outline: none;
+  background: rgba(255,255,255,0.06);
+}
+
+/* ===============================
+   Image
+=============================== */
+
+.up-image-section {
+  display: flex;
+  justify-content: center;
+}
+
+.up-image-preview {
+  width: 220px;
+  height: 140px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.up-image-preview:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* ===============================
+   Submit
+=============================== */
+
+.up-submit-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.up-submit-button {
+  padding: 10px 30px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(
+    135deg,
+    rgba(120,170,255,0.25),
+    rgba(80,120,200,0.25)
+  );
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.up-submit-button:hover {
+  opacity: 0.85;
+}
+
+.up-submit-button:active {
+  transform: translateY(1px);
+}
+
+/* ===============================
+   Image display (square unified)
+=============================== */
+
+.up-image-display {
+  width: 100%;
+  max-width: 360px;   /* ← right / my-page と同値にする */
+  aspect-ratio: 1 / 1;
+  margin-top: 8px;
+  align-self: center;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.04);
+}
+
+.up-image-display img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===============================
+   Action row
+=============================== */
+
+.up-action-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+/* ＋ボタン（label対応・最終版） */
+.up-add-button {
+  display: flex;                 /* ← これが最重要 */
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+
+  font-size: 20px;
+  line-height: 1;                /* ← 崩れ防止 */
+  cursor: pointer;
+
+  user-select: none;             /* ← テキスト選択防止 */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.up-add-button:hover {
+  background: rgba(255,255,255,0.14);
+}
+
+.up-add-button:active {
+  transform: scale(0.96);
+}
+
+
+.post-image-frame {
+  width: 100%;
+  max-width: 360px;   /* ← この数値を3画面で統一 */
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.04);
+}
+
+.post-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===============================
+   Image navigation
+=============================== */
+
+.image-nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.up-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* ナビボタン */
+.image-nav {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+}
+
+.image-nav:hover {
+  color: rgba(255,255,255,0.9);
+}
+
+
+.is-hidden {
+  display: none;
+}
+
+/* ===============================
+   User Icon (shared)
+=============================== */
+
+.up-user-icon,
+.my-user-icon,
+.user-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0.12)
+  );
+}
+
+.up-user-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: #111;
+}
+
+/* ===============================
+   User Name (shared)
+=============================== */
+
+.up-user-name,
+.my-user-name,
+.user-name {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.75);
+}
