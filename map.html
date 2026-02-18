@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIRABA | MAP</title>
+  <link rel="stylesheet" href="./css/style.css">
+    <!-- BASE -->
+  <link rel="stylesheet" href="./css/base/reset.css">
+  <link rel="stylesheet" href="./css/base/variables.css">
+  <link rel="stylesheet" href="./css/base/base.css">
+
+  <!-- LAYOUT -->
+  <link rel="stylesheet" href="./css/layout/screen.css">
+  <link rel="stylesheet" href="./css/layout/sidebar.css">
+
+  <!-- PAGE -->
+  <link rel="stylesheet" href="./css/pages/map.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="black">
+
+<!-- ===== MENU BUTTON ===== -->
+<button id="menu-toggle">
+  <span class="menu-icon">
+    <span></span><span></span><span></span>
+  </span>
+  <span class="menu-text">MENU</span>
+</button>
+
+<!-- ===== SIDEBAR OVERLAY ===== -->
+<div class="sidebar-overlay"></div>
+
+<!-- ===== SIDEBAR ===== -->
+<nav class="sidebar">
+  <div class="sidebar-inner">
+
+    <div class="sidebar-header">
+      <img src="./images/miraba-logo.png" alt="MIRABA">
+    </div>
+
+    <div class="sidebar-body">
+      <ul class="sidebar-menu">
+        <li data-page="index.html">TOP</li>
+        <li data-page="profile.html">プロフィール</li>
+        <li data-page="up.html">投稿</li>
+        <li data-page="my-page.html">マイページ</li>
+        <li data-page="map.html" class="active">MAP</li>
+        <li data-page="friend.html">フレンド</li>
+        <li data-page="notice.html">お知らせ</li>
+        <li data-page="setting-p.html">設定とプライバシー</li>
+        <li data-page="help.html">ヘルプ</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-footer">MIRABA</div>
+  </div>
+</nav>
+
+<!-- ===== MAIN ===== -->
+<main class="screen map-screen">
+
+  <div class="map-container">
+
+    <!-- =========================
+         LEFT : REQUEST一覧
+    ========================== -->
+    <section class="map-left">
+
+      <!-- ===== SEARCH FILTER ===== -->
+      <div class="request-filter">
+        <h2>REQUESTを探す</h2>
+
+        <div class="filter-group">
+          <label>場所</label>
+
+          <!-- メイン -->
+          <select name="filter-location-mode" id="filter-location-mode">
+            <option value="all">すべて</option>
+            <option value="near">近く</option>
+            <option value="region">方面から選択</option>
+          </select>
+
+          <!-- 方面 -->
+          <select id="filter-region" class="is-hidden">
+            <option value="">方面を選択</option>
+          </select>
+
+          <!-- 都道府県 -->
+          <select id="filter-pref" class="is-hidden">
+            <option value="">都道府県を選択</option>
+          </select>
+
+        </div>
+
+        <div class="filter-group">
+          <label>内容</label>
+          <select name="filter-type">
+            <option>すべて</option>
+            <option>ゴミ拾い</option>
+            <option>清掃活動</option>
+            <option>除雪</option>
+            <option>慈善活動</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ===== REQUEST LIST ===== -->
+      <ul class="request-list">
+        <!-- JS生成専用（ダミー削除済） -->
+      </ul>
+
+    </section>
+
+    <!-- =========================
+         RIGHT : REQUESTを出す
+    ========================== -->
+    <section class="map-right">
+
+      <!-- ===== REQUEST FORM ===== -->
+      <section class="request-form" id="request-form">
+
+        <h2>REQUESTを出す</h2>
+
+        <div class="form-group">
+          <label>日時</label>
+          <input type="date" name="start-date">
+          <input type="date" name="end-date">
+        </div>
+
+        <div class="form-group">
+          <label>住所</label>
+
+          <div class="zip-search">
+            <input
+              type="text"
+              class="address-zip"
+              placeholder="郵便番号（例：0600001）"
+              maxlength="7"
+            >
+            <button type="button" class="zip-search-btn">
+              検索
+            </button>
+          </div>
+
+          <select class="address-pref" name="prefecture">
+            <option value="">都道府県</option>
+            <option>北海道</option>
+            <option>東京都</option>
+            <option>大阪府</option>
+          </select>
+
+          <input
+            type="text"
+            class="address-city"
+            name="city"
+            placeholder="市区町村"
+          >
+
+          <input
+            type="text"
+            class="address-detail"
+            name="detail-address"
+            placeholder="町名・番地（任意）"
+          >
+
+          <p class="form-note">
+            郵便番号を入力して検索すると住所が自動入力されます
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label>REQUEST内容</label>
+          <select name="request-type">
+            <option>ゴミ拾い</option>
+            <option>清掃活動</option>
+            <option>除雪</option>
+            <option>慈善活動</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>概要</label>
+          <textarea name="summary" placeholder="どのような協力を想定していますか"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>連絡事項</label>
+          <textarea name="note"></textarea>
+        </div>
+
+        <div class="submit-row">
+          <button class="request-submit">
+            REQUESTを出す
+          </button>
+
+          <div class="request-philosophy">
+            <p>
+              このREQUESTは、誰かに責任を求めるものではありません。<br>
+              できる人が、できる範囲で関わるための「協力の目印」です。
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ===== SAVED / OWN PANEL ===== -->
+      <section class="saved-request-panel">
+
+        <div class="saved-columns">
+
+          <!-- ===== 保存したREQUEST ===== -->
+          <div class="saved-column">
+
+            <h3 class="saved-panel-title">
+              保存したREQUEST
+            </h3>
+
+            <ul class="saved-request-list saved-left-list">
+              <!-- JS生成専用 -->
+            </ul>
+
+          </div>
+
+          <!-- ===== 自分のREQUEST ===== -->
+          <div class="saved-column">
+
+            <h3 class="saved-panel-title">
+              自分のREQUEST
+            </h3>
+
+            <ul class="saved-request-list saved-own-list">
+              <!-- JS生成専用 -->
+            </ul>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </section>
+
+  </div>
+</main>
+
+<!-- ===== scripts ===== -->
+<script src="./js/sidebar.js"></script>
+<script src="./js/auth-guard.js"></script>
+<script src="./js/user-store.js"></script>
+<script src="./js/user-util.js"></script>
+
+<script src="./js/map.js"></script>
+
+</body>
+</html>

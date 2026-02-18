@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIRABA | プロフィール編集</title>
+
+  <link rel="stylesheet" href="./css/base/reset.css" />
+  <link rel="stylesheet" href="./css/base/variables.css" />
+  <link rel="stylesheet" href="./css/base/base.css" />
+  <link rel="stylesheet" href="./css/layout/screen.css" />
+  <link rel="stylesheet" href="./css/layout/sidebar.css" />
+  <link rel="stylesheet" href="./css/pages/profile-edit.css" />
+</head>
+<body>
+
+<div class="sidebar-overlay"></div>
+<nav class="sidebar">
+  <div class="sidebar-inner">
+    <div class="sidebar-body">
+      <ul class="sidebar-menu">
+        <li data-page="index.html">TOP</li>
+        <li data-page="profile.html">プロフィール</li>
+        <li data-page="up.html">投稿</li>
+        <li data-page="my-page.html">マイページ</li>
+        <li data-page="map.html">MAP</li>
+        <li data-page="friend.html">フレンド</li>
+        <li data-page="notice.html">お知らせ</li>
+        <li data-page="setting-p.html">設定とプライバシー</li>
+        <li data-page="help.html">ヘルプ</li>
+      </ul>
+      <div class="sidebar-footer">MIRABA</div>
+    </div>
+  </div>
+</nav>
+
+<main class="screen profile-edit-screen">
+<section class="edit-card glass-card">
+
+<header class="edit-header">
+  <h1>プロフィール編集</h1>
+  <p>あなた自身を、静かに整える</p>
+</header>
+
+<!-- Avatar -->
+<div class="edit-section avatar-section">
+  <div class="avatar-edit" id="avatarEdit">
+    <div class="avatar-circle">
+      <img id="avatarPreview" />
+    </div>
+  </div>
+  <input type="file" id="avatarInput" accept="image/*" hidden>
+</div>
+
+<!-- Name（常に公開） -->
+<div class="edit-section">
+  <label>表示名</label>
+  <div class="name-fields">
+    <input type="text" id="lastNameInput" placeholder="苗字">
+    <input type="text" id="firstNameInput" placeholder="名前">
+  </div>
+</div>
+
+<!-- Gender -->
+<div class="edit-section">
+  <div class="edit-label-row">
+    <label>性別</label>
+    <label class="visibility-toggle">
+      <input type="checkbox" data-field="gender">
+      <span class="toggle-ui"></span>
+      <span class="toggle-text">公開</span>
+    </label>
+  </div>
+  <select id="genderSelect">
+    <option value="">選択しない</option>
+    <option value="男性">男性</option>
+    <option value="女性">女性</option>
+    <option value="その他">その他</option>
+  </select>
+</div>
+
+<!-- Birthday -->
+<div class="edit-section">
+  <div class="edit-label-row">
+    <label>生年月日</label>
+    <label class="visibility-toggle">
+      <input type="checkbox" data-field="birthday">
+      <span class="toggle-ui"></span>
+      <span class="toggle-text">公開</span>
+    </label>
+  </div>
+  <div class="birthday-select">
+    <select id="birthYear"></select>
+    <select id="birthMonth"></select>
+    <select id="birthDay"></select>
+  </div>
+</div>
+
+<!-- Address -->
+<div class="edit-section">
+  <div class="edit-label-row">
+    <label>住所</label>
+    <label class="visibility-toggle">
+      <input type="checkbox" data-field="address">
+      <span class="toggle-ui"></span>
+      <span class="toggle-text">公開</span>
+    </label>
+  </div>
+
+  <input type="text" id="postalCode" placeholder="郵便番号">
+  <input type="text" id="prefecture" placeholder="都道府県">
+  <input type="text" id="city" placeholder="市区町村">
+  <input type="text" id="street" placeholder="番地">
+  <input type="text" id="building" placeholder="建物名・部屋番号">
+</div>
+
+<div class="edit-actions">
+  <button class="save-button" id="saveProfile">保存する</button>
+</div>
+
+</section>
+</main>
+
+<script src="./js/sidebar.js"></script>
+<script src="./js/auth-guard.js"></script>
+<script src="./js/profile-edit.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <title>MIRABA | LOGIN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+    <!-- Base -->
+  <link rel="stylesheet" href="./css/base/reset.css">
+  <link rel="stylesheet" href="./css/base/variables.css">
+  <link rel="stylesheet" href="./css/base/base.css">
+
+  <!-- Layout -->
+  <link rel="stylesheet" href="./css/layout/screen.css">
+  <link rel="stylesheet" href="./css/layout/sidebar.css">
+  <link rel="stylesheet" href="./css/pages/login.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<body>
+
+  <div class="login-screen">
+
+    <!-- 背景演出 -->
+    <div class="login-bg"></div>
+
+    <!-- ログインカード -->
+    <div class="login-card">
+
+      <!-- ロゴ -->
+      <div class="login-logo">
+        MIRABA
+      </div>
+
+      <!-- メッセージ -->
+      <p class="login-message">
+        ミライのあなたの住む場所を守る<br>
+        <span>Protecting and creating your future home</span>
+      </p>
+
+      <!-- フォーム -->
+      <div class="login-form">
+        <input type="email" id="email" placeholder="Email address">
+        <input type="password" id="password" placeholder="Password">
+
+        <button id="loginBtn">
+          Googleアカウントでログイン
+        </button>
+      </div>
+
+      <!-- 補足 -->
+      <p class="login-note">
+        ※ Googleアカウントを使用します
+      </p>
+
+    </div>
+  </div>
+
+  <script src="./js/auth.js"></script>
+</body>
+</html>
