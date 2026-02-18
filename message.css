@@ -1,9 +1,0 @@
-/* 黒3 環境メッセージ */
-.env-message{
-  max-width: 760px;
-  text-align: center;
-  font-size: 18px;
-  line-height: 2.2;
-  letter-spacing: 2px;
-  opacity: .85;
-}
