@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>MIRABA | 投稿</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+    <!-- BASE -->
+<link rel="stylesheet" href="./css/base/reset.css">
+<link rel="stylesheet" href="./css/base/variables.css">
+<link rel="stylesheet" href="./css/base/base.css">
+
+<!-- LAYOUT -->
+<link rel="stylesheet" href="./css/layout/screen.css">
+<link rel="stylesheet" href="./css/layout/sidebar.css">
+
+<!-- PAGE -->
+<link rel="stylesheet" href="./css/pages/up.css"> <!-- up.html -->
+<link rel="stylesheet" href="./css/pages/m-right.css"> <!-- index.html -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="black">
+
+<!-- ===== MENU BUTTON ===== -->
+<button id="menu-toggle">
+  <span class="menu-icon"><span></span><span></span><span></span></span>
+  <span class="menu-text">MENU</span>
+</button>
+
+<!-- ===== SIDEBAR OVERLAY ===== -->
+<div class="sidebar-overlay"></div>
+
+<!-- ===== SIDEBAR ===== -->
+<nav class="sidebar">
+  <div class="sidebar-inner">
+
+    <div class="sidebar-header">
+      <img src="./images/miraba-logo.png" alt="MIRABA">
+    </div>
+
+    <div class="sidebar-body">
+      <ul class="sidebar-menu">
+        <li data-page="index.html">TOP</li>
+        <li data-page="profile.html">プロフィール</li>
+        <li data-page="up.html" class="active">投稿</li>
+        <li data-page="my-page.html">マイページ</li>
+        <li data-page="map.html">MAP</li>
+        <li data-page="friend.html">フレンド</li>
+        <li data-page="notice.html">お知らせ</li>
+        <li data-page="setting-p.html">設定とプライバシー</li>
+        <li data-page="help.html">ヘルプ</li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ===== MAIN ===== -->
+<main class="up-screen">
+
+  <!-- ページヘッダー -->
+  <header class="up-header">
+    <h1>投稿</h1>
+    <p>気づきや行動を、教えてください</p>
+  </header>
+
+<!-- 投稿カード -->
+<section class="up-card glass-card">
+
+<!-- ユーザー表示 -->
+<div class="up-user">
+  <div class="up-user-icon"></div>
+  <span class="up-user-name"></span>
+</div>
+
+  <!-- 投稿テキスト -->
+  <div class="up-textarea-wrap">
+    <textarea
+      class="up-textarea"
+      placeholder="今、街の中で感じたことを…"
+      rows="6"
+    ></textarea>
+  </div>
+
+<!-- 選択画像表示 -->
+<div class="up-image-wrapper is-hidden">
+
+  <button class="image-nav prev" type="button">＜</button>
+
+  <div class="up-image-display">
+    <img alt="">
+  </div>
+
+  <button class="image-nav next" type="button">＞</button>
+
+</div>
+
+<!-- アクション -->
+<div class="up-action-row">
+
+  <label class="up-add-button" for="image-input">＋</label>
+
+  <input
+    type="file"
+    id="image-input"
+    accept="image/*"
+    multiple
+    hidden
+  >
+
+  <button class="up-submit-button">投稿する</button>
+</div>
+
+
+</section>
+
+</main>
+
+<script src="./js/sidebar.js"></script>
+<script src="./js/user-store.js"></script>
+<script src="./js/user-util.js"></script>
+<script src="./js/up.js"></script>
+</body>
+</html>

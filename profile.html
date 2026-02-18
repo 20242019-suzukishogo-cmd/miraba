@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIRABA | プロフィール</title>
+
+  <!-- base -->
+  <link rel="stylesheet" href="./css/base/reset.css" />
+  <link rel="stylesheet" href="./css/base/variables.css" />
+  <link rel="stylesheet" href="./css/base/base.css" />
+
+  <!-- layout -->
+  <link rel="stylesheet" href="./css/layout/screen.css" />
+  <link rel="stylesheet" href="./css/layout/sidebar.css" />
+
+  <!-- page -->
+  <link rel="stylesheet" href="./css/pages/profile.css" />
+</head>
+
+<body>
+
+<!-- ===== MENU BUTTON ===== -->
+<button id="menu-toggle">
+  <span class="menu-icon"><span></span><span></span><span></span></span>
+  <span class="menu-text">MENU</span>
+</button>
+
+<!-- ===== sidebar（固定定義） ===== -->
+<div class="sidebar-overlay"></div>
+<nav class="sidebar">
+  <div class="sidebar-inner">
+    <div class="sidebar-body">
+      <ul class="sidebar-menu">
+        <li data-page="index.html">TOP</li>
+        <li data-page="profile.html" class="active">プロフィール</li>
+        <li data-page="up.html">投稿</li>
+        <li data-page="my-page.html">マイページ</li>
+        <li data-page="map.html">MAP</li>
+        <li data-page="friend.html">フレンド</li>
+        <li data-page="notice.html">お知らせ</li>
+        <li data-page="setting-p.html">設定とプライバシー</li>
+        <li data-page="help.html">ヘルプ</li>
+      </ul>
+      <div class="sidebar-footer">MIRABA</div>
+    </div>
+    <div class="sidebar-header">
+      <img src="./images/miraba-logo.png" alt="MIRABA">
+    </div>
+  </div>
+</nav>
+
+<!-- ===== main ===== -->
+<main class="screen profile-screen">
+
+<section class="profile-card glass-card">
+<div class="profile-card-bg"></div>
+
+<!-- profile-hero -->
+<div class="profile-main profile-hero">
+
+  <div class="profile-hero-bg"></div>
+
+  <div class="profile-hero-content">
+
+    <div class="avatar-wrap">
+      <div class="avatar-circle"></div>
+    </div>
+
+    <p class="display-name">MIRABA User</p>
+
+    <div class="name-divider"></div>
+
+    <!-- 年齢 -->
+    <p class="profile-age" id="profileAge">--</p>
+
+    <!-- 性別 / 生年月日 / 住所 -->
+    <div class="profile-sub-meta">
+      <span id="profileGender">--</span>
+      <span class="meta-separator">/</span>
+      <span id="profileBirthday">--</span>
+      <span class="meta-separator">/</span>
+      <span id="profileAddress">--</span>
+    </div>
+
+    <button class="edit-button">プロフィールを編集</button>
+
+  </div>
+</div>
+
+<!-- 行動指標 -->
+<div class="profile-stats">
+  <div class="stat">
+    <span class="value" id="postCount">0</span>
+    <span class="label">投稿</span>
+  </div>
+  <div class="stat">
+    <span class="value" id="usagePeriod">--</span>
+    <span class="label">利用期間</span>
+  </div>
+</div>
+
+<!-- メッセージ -->
+<div class="profile-note">
+  <p>
+    日常の中での小さな行動が、<br>
+    街と未来を守る力として、<br>
+    静かに積み重なっています。
+  </p>
+</div>
+
+</section>
+</main>
+
+<!-- scripts -->
+<script src="./js/sidebar.js"></script>
+<script src="./js/auth-guard.js"></script>
+<script src="./js/profile.js"></script>
+<script src="./js/user-util.js"></script>
+
+</body>
+</html>
