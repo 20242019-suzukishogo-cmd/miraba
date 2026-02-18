@@ -1,0 +1,30 @@
+/* ===============================
+   ACTIVITY
+=============================== */
+
+.activity-grid{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 40px;
+}
+
+/* 画像 */
+.activity-item img{
+  width: 100%;
+  display: block;
+  margin-bottom: 16px;
+}
+
+/* タイトル */
+.activity-title{
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+/* 説明 */
+.activity-text{
+  font-size: 13px;
+  line-height: 1.7;
+  color: #555;
+}

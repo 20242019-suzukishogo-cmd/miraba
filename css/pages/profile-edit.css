@@ -1,0 +1,355 @@
+/* ===============================
+   Screen
+=============================== */
+
+.profile-edit-screen {
+  display: flex;
+  justify-content: center;
+  padding: 8vh 6vw;
+}
+
+/* ===============================
+   Card
+=============================== */
+
+.edit-card {
+  width: 100%;
+  max-width: 520px;
+  padding: 36px 40px 42px;
+}
+
+/* ===============================
+   Header
+=============================== */
+
+.edit-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.edit-header h1 {
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+}
+
+.edit-header p {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* ===============================
+   Sections
+=============================== */
+
+.edit-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.edit-section label {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.edit-section input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: inherit;
+}
+
+.edit-section small {
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+
+/* ===============================
+   Avatar
+=============================== */
+
+.avatar-section {
+  align-items: center;
+}
+
+.avatar-edit {
+  position: relative;
+  cursor: pointer;
+}
+
+.avatar-circle {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0.08)
+  );
+  border: 1px solid rgba(255,255,255,0.25);
+}
+.profile-edit-screen .avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.change-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.avatar-edit:hover .change-hint {
+  opacity: 0.75;
+}
+
+/* ===============================
+   Actions
+=============================== */
+
+.edit-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.save-button {
+  padding: 10px 26px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+
+.birthday-select {
+  display: flex;
+  gap: 10px;
+}
+
+.birthday-select select {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: inherit;
+}
+
+
+.name-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.name-fields input {
+  flex: 1;
+}
+
+
+
+/* ===============================
+   Responsive
+=============================== */
+
+@media (max-width: 640px) {
+  .edit-card {
+    padding: 30px 22px 36px;
+  }
+}
+
+
+.edit-section select {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: inherit;
+}
+
+
+.profile-card,
+.edit-card {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.18),
+      rgba(255,255,255,0.08)
+    );
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+}
+
+.edit-section input,
+.edit-section select {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #f5f5f5;
+  backdrop-filter: blur(6px);
+}
+
+.edit-section select option {
+  background: #111;
+  color: #f5f5f5;
+}
+
+.edit-button {
+  margin-top: 10px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background .2s, box-shadow .2s, transform .2s;
+}
+
+.edit-button:hover {
+  background: rgba(255,255,255,0.26);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.3);
+  transform: translateY(-1px);
+}
+
+.save-button {
+  padding: 12px 34px;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.32),
+    rgba(255,255,255,0.14)
+  );
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.save-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+}
+
+.avatar-circle {
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0.08)
+  );
+  border: 1px solid rgba(255,255,255,0.25);
+  overflow: hidden;
+}
+
+.profile-screen .avatar-circle {
+  width: 84px;
+  height: 84px;
+}
+
+.profile-edit-screen .avatar-circle {
+  width: 96px;
+  height: 96px;
+}
+
+body {
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(255,180,120,0.08),
+      transparent 60%
+    ),
+    #0b0b0b;
+}
+
+/* ===============================
+   Visibility Toggle
+=============================== */
+
+.edit-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.visibility-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: #f0d9a7;
+  cursor: pointer;
+  user-select: none;
+}
+
+.visibility-toggle input {
+  display: none;
+}
+
+.toggle-ui {
+  width: 34px;
+  height: 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.25);
+  position: relative;
+  transition: background 0.2s ease;
+}
+
+.toggle-ui::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.2s ease;
+}
+
+.visibility-toggle input:checked + .toggle-ui {
+  background: linear-gradient(
+    135deg,
+    rgba(212,176,122,0.9),
+    rgba(184,147,92,0.9)
+  );
+}
+
+.visibility-toggle input:checked + .toggle-ui::after {
+  transform: translateX(16px);
+}
+
+.toggle-text {
+  opacity: 0.7;
+}
+
+/* ===============================
+   Address Section
+=============================== */
+
+.edit-section input {
+  margin-top: 4px;
+}
+
+.edit-section input + input {
+  margin-top: 6px;
+}

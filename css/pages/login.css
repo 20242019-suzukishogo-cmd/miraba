@@ -1,0 +1,157 @@
+/* ===============================
+   BASE
+=============================== */
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: "Inter", "Noto Sans JP", sans-serif;
+  background: #0a0a0a;
+  color: #f3f3f3;
+}
+
+/* ===============================
+   SCREEN
+=============================== */
+.login-screen{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===============================
+   BACKGROUND
+=============================== */
+.login-bg{
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(180,120,90,0.18),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(90,130,180,0.18),
+      transparent 60%
+    ),
+    #0a0a0a;
+
+  filter: blur(0px);
+  z-index: 0;
+}
+
+/* ===============================
+   CARD
+=============================== */
+.login-card{
+  position: relative;
+  z-index: 1;
+
+  width: 420px;
+  padding: 56px 48px;
+
+  background: rgba(20,20,20,0.72);
+  backdrop-filter: blur(18px);
+
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+
+  text-align: center;
+}
+
+/* ===============================
+   LOGO
+=============================== */
+.login-logo{
+  font-size: 42px;
+  letter-spacing: 6px;
+  font-weight: 300;
+  margin-bottom: 28px;
+}
+
+/* ===============================
+   MESSAGE
+=============================== */
+.login-message{
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: .85;
+  margin-bottom: 40px;
+}
+
+.login-message span{
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: .6;
+}
+
+/* ===============================
+   FORM
+=============================== */
+.login-form{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-form input{
+  height: 46px;
+  padding: 0 16px;
+
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 10px;
+
+  color: #fff;
+  font-size: 14px;
+}
+
+.login-form input::placeholder{
+  color: rgba(255,255,255,0.5);
+}
+
+.login-form button{
+  margin-top: 18px;
+  height: 48px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(180,140,90,0.9),
+    rgba(120,160,200,0.9)
+  );
+
+  border: none;
+  border-radius: 12px;
+
+  color: #111;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+  transition: transform .2s ease, box-shadow .3s ease;
+}
+
+.login-form button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+/* ===============================
+   NOTE
+=============================== */
+.login-note{
+  margin-top: 24px;
+  font-size: 11px;
+  opacity: .5;
+}

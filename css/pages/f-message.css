@@ -1,0 +1,256 @@
+/* ===============================
+   F-MESSAGE - MIRABA FINAL
+   =============================== */
+
+/* MESSAGE専用アクセント（TOPと同系統の光） */
+.f-message-screen{
+  --msg-accent-grad: linear-gradient(
+    120deg,
+    #b9d7ff,
+    #5aa2ff,
+    #e6f1ff
+  );
+  --msg-accent-glow-strong: rgba(120,190,255,0.6);
+  --msg-accent-glow: rgba(90,160,255,0.35);
+  --msg-accent-border: rgba(120,190,255,0.9);
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: rgba(0,0,0,0.9);
+  color: #fff;
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+
+.f-message-header{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+/* BACK */
+
+.back-btn{
+  position: absolute;
+  left: 20px;
+  top: 46%;                 /* ← 少し上に */
+  transform: translateY(-50%);
+
+  width: 56px;              /* タップ領域拡大 */
+  height: 56px;
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+
+.arrow{
+  display: block;
+
+  width: 40px;              /* ← 大きく */
+  height: 30px;
+
+  /* ⇦ の形 */
+  clip-path: polygon(
+    0 50%,
+    36.8% 0,
+    36.8% 31%,
+    100% 31%,
+    100% 69%,
+    36.8% 69%,
+    36.8% 100%
+  );
+
+  /* MIRABA 光グラデ */
+  background: linear-gradient(
+    120deg,
+    #b9d7ff,
+    #5aa2ff,
+    #e6f1ff
+  );
+
+  /* 発光（TOPと同系統・弱め） */
+  box-shadow:
+    0 0 10px rgba(120,190,255,0.6),
+    0 0 20px rgba(90,160,255,0.35);
+}
+
+
+.back-btn:active .arrow{
+  transform: scale(0.95);
+}
+
+
+
+/* USER */
+.f-message-user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.f-message-icon{
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.28);
+}
+
+.f-message-user-text .name{
+  font-size: 15px;
+}
+
+.f-message-user-text .status{
+  font-size: 12px;
+  opacity: .6;
+}
+
+/* ===============================
+   MESSAGE AREA
+   =============================== */
+
+.f-message-area{
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.date-divider{
+  align-self: center;
+  font-size: 12px;
+  opacity: .5;
+  margin: 8px 0;
+}
+
+/* ROW */
+.f-message-row{
+  display: flex;
+}
+
+.f-message-row.received{
+  justify-content: flex-start;
+}
+
+.f-message-row.sent{
+  justify-content: flex-end;
+}
+
+/* BUBBLE */
+.bubble{
+  max-width: 70%;
+  padding: 14px 18px 22px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.7;
+  position: relative;
+}
+
+.f-message-row.received .bubble{
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+}
+
+.f-message-row.sent .bubble{
+  background: var(--msg-accent-grad);
+  color: #021024;
+}
+
+.time{
+  position: absolute;
+  right: 12px;
+  bottom: 6px;
+  font-size: 11px;
+  opacity: .6;
+}
+
+/* ===============================
+   INPUT AREA
+   =============================== */
+
+.f-message-input{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+/* TOOL */
+.tool-btn{
+  width: 44px;
+  height: 44px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid var(--msg-accent-border);
+
+  color: #dcecff;
+  font-size: 18px;
+  box-shadow: 0 0 10px var(--msg-accent-glow);
+
+  cursor: pointer;
+}
+
+/* INPUT */
+.f-message-input textarea{
+  flex: 1;
+  height: 44px;
+
+  resize: none;
+  border-radius: 16px;
+  border: 1px solid var(--msg-accent-border);
+
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.08);
+
+  color: #fff;
+  font-size: 14px;
+}
+
+/* SEND */
+.send-btn{
+  height: 44px;
+  min-width: 80px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 22px;
+  border-radius: 16px;
+  border: none;
+
+  background: var(--msg-accent-grad);
+  color: #021024;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  box-shadow:
+    0 0 18px var(--msg-accent-glow-strong),
+    0 6px 24px rgba(90,160,255,0.35);
+
+  cursor: pointer;
+}

@@ -1,0 +1,116 @@
+/* ===============================
+   FAQ
+=============================== */
+
+#faq{
+  text-align: center;
+}
+
+.faq-list{
+  max-width: 820px;
+  margin: 60px auto 0;
+}
+
+.faq-item{
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  padding: 24px 0;
+}
+
+/* 質問 */
+.faq-question{
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  text-align: left;
+  font-size: 18px;
+  letter-spacing: 1px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question::after{
+  content: "+";
+  font-size: 20px;
+  transition: transform .3s ease;
+}
+
+/* 回答 */
+.faq-answer{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease, opacity .3s ease;
+  opacity: 0;
+}
+
+.faq-answer p{
+  margin-top: 16px;
+  line-height: 1.8;
+  opacity: .85;
+}
+
+/* OPEN状態 */
+.faq-answer.open{
+  max-height: 400px;
+  opacity: 1;
+}
+
+.faq-item.open .faq-answer{
+  max-height: 240px;
+}
+
+.faq-item.open .faq-question::after{
+  transform: rotate(45deg);
+}
+
+/* ===============================
+   FAQ INPUT
+=============================== */
+
+.faq-input{
+  max-width: 820px;
+  margin: 40px auto 60px;
+  text-align: center;
+}
+
+.faq-input-title{
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+  opacity: .8;
+}
+
+.faq-input-box{
+  display: flex;
+  gap: 12px;
+}
+
+.faq-input-box input{
+  flex: 1;
+  height: 48px;
+  padding: 0 16px;
+
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+.faq-input-box button{
+  width: 96px;
+  border-radius: 10px;
+  border: none;
+
+  background: #111;
+  color: #fff;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+  transition: opacity .3s ease;
+}
+
+.faq-input-box button:hover{
+  opacity: .7;
+}

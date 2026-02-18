@@ -1,0 +1,407 @@
+/* =====================================
+   MAP DETAIL SCREEN
+===================================== */
+
+.map-detail-screen {
+  padding: 24px 6vw 6vh;
+}
+
+/* ===============================
+   CONTAINER（高さの親）
+=============================== */
+
+.map-detail-container {
+  display: flex;
+  gap: 32px;
+
+  height: calc(100vh - 100px); /* header分を除外 */
+  margin-top: 24px;
+
+  align-items: stretch; /* ← 左右を同じ高さにする核心 */
+}
+
+/* ===============================
+   MAP DETAIL HEADER
+=============================== */
+
+.map-detail-header {
+  position: relative;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 24px;
+
+  background: linear-gradient(
+    135deg,
+    #fdf8ef,
+    #f2eadc
+  );
+
+  box-shadow:
+    inset 0 -1px 0 rgba(220,200,160,0.45),
+    0 10px 24px rgba(0,0,0,0.22);
+}
+
+.map-detail-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #2a2a2a;
+}
+
+.back-btn {
+  position: absolute;
+  left: 24px;
+
+  background: none;
+  border: none;
+
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: rgba(40,40,40,0.7);
+
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  opacity: 0.6;
+}
+
+/* ===============================
+   LEFT : REQUEST DETAIL
+=============================== */
+
+.detail-left {
+  flex: 0 0 42%; /* ← 安定した情報カラム */
+  display: flex;
+}
+
+.request-detail-card {
+  width: 100%;
+  height: 100%; /* ← 親に従う */
+
+  padding: 34px 32px;
+  border-radius: 18px;
+
+  background: linear-gradient(
+    180deg,
+    #fff9ee 0%,
+    #f4e7cc 55%,
+    #ead8b5 100%
+  );
+
+  border: 1.5px solid rgba(190,170,130,0.6);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.9),
+    inset 0 -1px 0 rgba(200,180,140,0.4),
+    0 24px 48px rgba(0,0,0,0.35);
+
+  color: #2a2a2a;
+  overflow-y: auto;
+}
+
+/* スクロールバー */
+.request-detail-card::-webkit-scrollbar {
+  width: 6px;
+}
+.request-detail-card::-webkit-scrollbar-thumb {
+  background: rgba(170,150,110,0.45);
+  border-radius: 999px;
+}
+
+/* 内部情報 */
+.detail-title {
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.detail-item .label {
+  min-width: 48px;
+  font-weight: 500;
+  color: rgba(80,70,50,0.75);
+}
+
+.detail-description {
+  margin-top: 12px;
+  line-height: 1.75;
+}
+
+.detail-note {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: rgba(60,60,60,0.55);
+}
+
+/* ===============================
+   RIGHT : MAP AREA
+=============================== */
+
+.detail-right {
+  flex: 1;
+  display: flex;
+}
+
+.map-area {
+  width: 100%;
+  height: 100%; /* ← 左カードと完全同期 */
+
+  border-radius: 18px;
+  background: rgba(0,0,0,0.42);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-placeholder {
+  text-align: center;
+}
+
+.map-label {
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.75);
+}
+
+.map-note {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.45);
+}
+
+.detail-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.detail-user-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#6aa8ff,#3b82f6);
+  border: 2px solid rgba(255,215,130,1);
+}
+
+.detail-user-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-row {
+  display: flex;
+  gap: 14px;
+}
+
+.detail-label {
+  min-width: 60px;
+  font-weight: 500;
+  color: rgba(80,70,50,0.75);
+}
+
+.detail-section {
+  margin-top: 8px;
+}
+
+.detail-text {
+  margin-top: 6px;
+  line-height: 1.7;
+}
+
+.detail-footer {
+  margin-top: 28px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.request-save-btn {
+  padding: 10px 26px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  background: linear-gradient(135deg,#9fc7ff,#5fa3ff);
+  cursor: pointer;
+}
+
+/* =====================================
+   EDIT BUTTON
+===================================== */
+
+.request-edit-btn {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: none;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  color: #0a1220;
+  background: linear-gradient(
+    135deg,
+    #ffe7a8,
+    #ffcf6a
+  );
+
+  box-shadow:
+    0 4px 14px rgba(255,215,130,0.6),
+    inset 0 0 0 1px rgba(255,255,255,0.6);
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.request-edit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 8px 20px rgba(255,215,130,0.8);
+}
+
+.is-hidden {
+  display: none;
+}
+
+.detail-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.detail-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.detail-user-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#6aa8ff,#3b82f6);
+}
+
+.detail-user-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.detail-edit-btn {
+  padding: 6px 18px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: linear-gradient(135deg,#f5e2b0,#e6c37a);
+  cursor: pointer;
+}
+
+.detail-update-btn {
+  margin-left: 12px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  background: linear-gradient(135deg,#9fc7ff,#5fa3ff);
+  cursor: pointer;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+/* =====================================
+   ARCHIVE BUTTON（取り下げ）
+===================================== */
+
+.detail-archive-btn {
+  margin-top: 20px;
+  padding: 10px 22px;
+
+  border-radius: 999px; /* 丸み強め */
+  border: none;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+
+  color: #4a1f24;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255,200,205,0.95),
+    rgba(235,160,170,0.9)
+  );
+
+  box-shadow:
+    0 6px 16px rgba(220,120,130,0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.6);
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* hover */
+.detail-archive-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 22px rgba(220,120,130,0.5),
+    inset 0 0 0 1px rgba(255,255,255,0.75);
+}
+
+/* active */
+.detail-archive-btn:active {
+  transform: translateY(0);
+  box-shadow:
+    0 4px 10px rgba(220,120,130,0.3),
+    inset 0 0 6px rgba(0,0,0,0.2);
+}
+
+/* 保存済み状態 */
+
+.request-save-btn.is-saved {
+  background: linear-gradient(
+    135deg,
+    #b8d7ff,
+    #7fb4ff
+  );
+
+  color: #0a1220;
+
+  box-shadow:
+    0 6px 16px rgba(90,160,255,0.5),
+    inset 0 0 0 1px rgba(255,255,255,0.7);
+}
+
+.map-area {
+  height: 420px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+#real-map {
+  width: 100%;
+  height: 100%;
+}

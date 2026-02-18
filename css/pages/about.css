@@ -1,0 +1,69 @@
+#about.screen{
+  min-height: 120vh;
+  padding: 0;
+}
+
+/* =====================================================
+   TOP / ABOUT 専用（余白は section 側で管理）
+===================================================== */
+#top,
+#about{
+  padding-top: 160px;
+  padding-bottom: 160px;
+  background: transparent;
+  position: relative;
+}
+
+/* =====================================================
+   ABOUT 内部背景（線が出ない最小構成）
+===================================================== */
+#about .lexus-background{
+  padding: 160px 0 200px;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(255,255,255,0.035),
+      transparent 70%
+    );
+}
+
+/* =====================================================
+   TOP → ABOUT 背景ブリッジ（1本化）
+===================================================== */
+#about::before{
+  content:'';
+  position:absolute;
+  top:-200px;                 /* ← 境界を完全に覆う */
+  left:0;
+  right:0;
+  height:200px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(10,10,10,0),
+    rgba(10,10,10,1)
+  );
+
+  pointer-events:none;
+  z-index:0;
+}
+
+.about-top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+    margin-top: -80px;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 5;
+}
+
+.about-top h1{
+  font-size: 48px;
+}
+
+.about-center{
+  margin-top: 80px;
+}
